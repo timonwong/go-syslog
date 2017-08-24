@@ -1,4 +1,4 @@
-// +build windows plan9
+// +build windows plan9 nacl
 
 package gsyslog
 
@@ -7,11 +7,11 @@ import (
 )
 
 // NewLogger is used to construct a new Syslogger
-func NewLogger(p Priority, facility, tag string) (Syslogger, error) {
+func NewLogger(p Priority, tag string) (Syslogger, error) {
 	return nil, fmt.Errorf("Platform does not support syslog")
 }
 
 // DialLogger is used to construct a new Syslogger that establishes connection to remote syslog server
-func DialLogger(network, raddr string, p Priority, facility, tag string) (Syslogger, error) {
+func DialLogger(network, raddr string, p Priority, tag string) (Syslogger, error) {
 	return nil, fmt.Errorf("Platform does not support syslog")
 }
